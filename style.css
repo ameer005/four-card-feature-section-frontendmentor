@@ -1,0 +1,214 @@
+/* SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  background-color: hsl(0, 0%, 98%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-feature {
+  /* background-color: red; */
+  width: 120rem;
+  margin: 3.2rem;
+}
+
+/* TOP TEXT BOX */
+
+.text-box {
+  text-align: center;
+  margin-bottom: 4.8rem;
+
+  /* background-color: red; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sub-heading {
+  font-size: 3.2rem;
+  font-weight: 200;
+  margin-bottom: 1.2rem;
+}
+
+.primary-heading {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: hsl(234, 12%, 34%);
+
+  margin-bottom: 2.4rem;
+}
+
+.main-text {
+  font-weight: 400;
+  color: hsl(229, 6%, 66%);
+
+  line-height: 1.6;
+
+  /* background-color: yellow; */
+
+  /* padding: 0 35rem; */
+  width: 45%;
+}
+
+/* FEATURE CARDS BOX */
+
+.feature-box {
+  display: grid;
+  grid-template-columns: 28% 28%;
+  /* gap: 3.2rem; */
+  justify-content: center;
+
+  /* background-color: violet; */
+}
+
+/* Global cards */
+
+.feature-card {
+  border-radius: 7px;
+  padding: 2.4rem;
+
+  box-shadow: 0 10px 18px hsla(212, 86%, 64%, 0.163);
+
+  /* background-color: blue; */
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card-text-box {
+  /* background-color: red; */
+}
+
+.card-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+
+  margin-bottom: 1.4rem;
+}
+
+.card-text {
+  font-size: 1.4rem;
+  color: hsl(229, 6%, 66%);
+  line-height: 1.7;
+
+  margin-bottom: 4rem;
+}
+
+.icon {
+  display: inline-block;
+  width: 5.4rem;
+
+  align-self: flex-end;
+}
+
+/* Individual cards */
+
+.supervisor {
+  border-top: 4px solid hsl(180, 62%, 55%);
+  transform: translate(-60%, 50%);
+}
+
+.team-builder {
+  border-top: 4px solid hsl(0, 78%, 62%);
+
+  transform: translateX(-50%);
+}
+
+.karma {
+  border-top: 4px solid hsl(34, 97%, 64%);
+  transform: translate(50%, 10%);
+}
+
+.calculator {
+  border-top: 4px solid hsl(212, 86%, 64%);
+  transform: translate(60%, -50%);
+}
+
+/* MEDIA QUERIES */
+
+/* Below 953px */
+
+@media (max-width: 60em) {
+  .feature-box {
+    grid-template-columns: 31% 31%;
+  }
+
+  .main-text {
+    width: 60%;
+  }
+}
+
+/* Below 700px */
+
+@media (max-width: 44em) {
+  .main-text {
+    width: 65%;
+  }
+
+  .feature-box {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem;
+  }
+  .feature-card {
+  }
+
+  .supervisor {
+    transform: translate(0%, 0%);
+  }
+
+  .team-builder {
+    transform: translateX(0%);
+  }
+
+  .karma {
+    transform: translate(0%, 0%);
+  }
+
+  .calculator {
+    transform: translate(0%, 0%);
+  }
+}
+
+/* Below 470px */
+@media (max-width: 29em) {
+  .feature-box {
+    grid-template-columns: 1fr;
+  }
+
+  .sub-heading {
+    font-size: 2.4rem;
+  }
+
+  .primary-heading {
+    font-size: 2.4rem;
+  }
+
+  .main-text {
+    width: 100%;
+
+    margin-bottom: 3.2rem;
+  }
+}
